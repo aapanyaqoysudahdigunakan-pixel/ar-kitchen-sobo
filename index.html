@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="AR KITCHEN SOBO — Pilihan Rasa, Pilihan Keluarga. Kuliner dan produk olahan berkualitas sejak 2017.">
+<title>AR KITCHEN SOBO — Est. 2017</title>
+<style>
+:root{
+  --bg:#f5f3ee;
+  --paper:#fffdf8;
+  --ink:#161616;
+  --muted:#6f6b64;
+  --line:#ded9cf;
+  --gold:#b18a45;
+  --gold2:#d0ae69;
+  --dark:#111;
+  --radius:24px;
+  --shadow:0 18px 55px rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  color:var(--ink); background:var(--bg); line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{
+  background:var(--dark);color:#fff;font-size:12px;letter-spacing:.16em;
+  text-align:center;padding:9px 15px;text-transform:uppercase;
+}
+header{
+  position:sticky;top:0;z-index:20;background:rgba(255,253,248,.94);
+  backdrop-filter:blur(16px);border-bottom:1px solid rgba(0,0,0,.08);
+}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.brand{display:flex;align-items:center;gap:13px}
+.monogram{
+  width:44px;height:44px;border:1px solid var(--gold);display:grid;place-items:center;
+  font-family:Georgia,serif;font-weight:700;color:var(--gold);font-size:17px;
+}
+.brand strong{font-size:16px;letter-spacing:.13em}
+.brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.22em;margin-top:1px}
+nav{display:flex;gap:28px;font-size:13px;font-weight:700;letter-spacing:.04em}
+nav a{position:relative}
+nav a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:1px;background:var(--gold);transition:.25s}
+nav a:hover:after{width:100%}
+.hero{padding:105px 0 90px;background:linear-gradient(135deg,#f8f6f1,#eee9df)}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;align-items:end;gap:70px}
+.kicker{font-size:11px;letter-spacing:.28em;color:var(--gold);font-weight:800;text-transform:uppercase;margin-bottom:18px}
+h1{
+  font-family:Georgia,"Times New Roman",serif;font-weight:500;
+  font-size:clamp(52px,8vw,104px);line-height:.9;letter-spacing:-.055em;
+}
+.hero-copy{max-width:690px;margin-top:28px;color:#57534c;font-size:17px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:48px;
+  padding:0 24px;border:1px solid var(--ink);font-size:12px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;transition:.2s
+}
+.btn.primary{background:var(--dark);color:#fff}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,.12)}
+.est-card{border-top:1px solid var(--gold);padding-top:22px;text-align:right}
+.est-card .year{font-family:Georgia,serif;font-size:72px;line-height:1;color:var(--gold)}
+.est-card p{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+section{padding:95px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:42px}
+.section-title{font-family:Georgia,serif;font-size:clamp(38px,5vw,62px);font-weight:500;line-height:1}
+.section-note{max-width:420px;color:var(--muted);font-size:14px}
+.about{background:var(--paper)}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px}
+.about-mark{font-family:Georgia,serif;font-size:110px;line-height:.8;color:#e2ddd3}
+.about p{font-family:Georgia,serif;font-size:clamp(22px,3vw,34px);line-height:1.38}
+.about p strong{color:var(--gold)}
+.menu-grid,.product-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+.item{
+  min-height:110px;padding:25px 5px;border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:20px;
+}
+.item:nth-child(odd){border-right:1px solid var(--line);padding-right:35px}
+.item:nth-child(even){padding-left:35px}
+.number{font-size:10px;color:var(--gold);font-weight:800;letter-spacing:.12em}
+.item h3{font-family:Georgia,serif;font-size:22px;font-weight:500}
+.item p{font-size:12px;color:var(--muted);margin-top:3px}
+.product-section{background:#171717;color:#fff}
+.product-section .section-note{color:#aaa}
+.product-section .section-title{color:#fff}
+.product-grid{border-color:#383838}
+.product-grid .item{border-color:#383838}
+.product-grid .item:nth-child(odd){border-right-color:#383838}
+.product-grid h3{color:#fff}
+.product-grid p{color:#999}
+.product-tag{font-size:9px;letter-spacing:.18em;color:var(--gold2);font-weight:800;text-transform:uppercase}
+.values{background:var(--paper)}
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.value{padding:28px 22px 10px 0;border-bottom:1px solid var(--line)}
+.value:not(:last-child){border-right:1px solid var(--line);margin-right:22px}
+.value b{font-family:Georgia,serif;font-size:24px;font-weight:500}
+.value p{font-size:13px;color:var(--muted);margin-top:10px}
+.contact{padding:110px 0;background:var(--gold);color:#17130c}
+.contact-inner{display:flex;align-items:end;justify-content:space-between;gap:50px}
+.contact h2{font-family:Georgia,serif;font-size:clamp(48px,7vw,88px);line-height:.92;font-weight:500;letter-spacing:-.05em}
+.contact p{margin-top:20px;max-width:520px}
+.contact .btn{border-color:#17130c}
+.contact .btn.primary{background:#17130c;color:#fff}
+.phone{font-family:Georgia,serif;font-size:clamp(25px,3vw,40px);white-space:nowrap}
+footer{background:#111;color:#aaa;padding:28px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;font-size:11px;letter-spacing:.05em}
+.footer-brand{color:#fff;letter-spacing:.15em}
+@media(max-width:800px){
+  .nav{height:68px}.brand strong{font-size:13px}nav{gap:14px;font-size:11px}
+  .hero{padding:75px 0 65px}.hero-grid,.about-grid{grid-template-columns:1fr;gap:45px}
+  .est-card{text-align:left}.est-card .year{font-size:58px}
+  section{padding:70px 0}.section-head{display:block}.section-note{margin-top:18px}
+  .menu-grid,.product-grid{grid-template-columns:1fr}
+  .item:nth-child(odd){border-right:0;padding-right:5px}
+  .item:nth-child(even){padding-left:5px}
+  .values-grid{grid-template-columns:1fr 1fr}
+  .value:nth-child(2){border-right:0;margin-right:0}
+  .contact-inner{display:block}.phone{margin-top:35px}
+}
+@media(max-width:520px){
+  nav a:nth-child(2){display:none}
+  h1{font-size:56px}.hero-copy{font-size:15px}
+  .values-grid{grid-template-columns:1fr}
+  .value:not(:last-child){border-right:0;margin-right:0}
+  .footer-inner{display:block}.footer-inner span{display:block;margin-top:8px}
+}
+</style>
+</head>
+<body>
+<div class="topbar">AR KITCHEN SOBO · EST. 2017 · RASA YANG DIJAGA</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#beranda" aria-label="AR KITCHEN SOBO">
+      <div class="monogram">AR</div>
+      <div><strong>AR KITCHEN SOBO</strong><small>ESTABLISHED 2017</small></div>
+    </a>
+    <nav>
+      <a href="#tentang">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#produk">Produk</a>
+      <a href="#kontak">Hubungi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="beranda">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">Culinary &amp; Selected Products</div>
+      <h1>AR<br>KITCHEN<br>SOBO</h1>
+      <p class="hero-copy">AR KITCHEN adalah toko yang menyediakan berbagai pilihan makanan dan produk olahan dengan cita rasa khas dan berkualitas.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#menu">Lihat Menu</a>
+        <a class="btn" href="#kontak">Hubungi Kami</a>
+      </div>
+    </div>
+    <div class="est-card">
+      <div class="year">2017</div>
+      <p>Est. · Quality · Taste · Family</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="tentang">
+  <div class="container about-grid">
+    <div class="about-mark">AR<br>07</div>
+    <div>
+      <div class="kicker">Tentang AR Kitchen</div>
+      <p>Kami mengutamakan <strong>rasa, kualitas, kebersihan,</strong> dan kepuasan pelanggan.</p>
+      <p style="margin-top:22px;font-size:18px;font-family:inherit;color:var(--muted)">Nikmati berbagai produk pilihan AR KITCHEN yang cocok untuk menemani hidangan sehari-hari.</p>
+      <p style="margin-top:25px;font-size:17px;font-family:inherit;font-weight:800;color:var(--ink)">AR KITCHEN — Pilihan Rasa, Pilihan Keluarga.</p>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">01 · Culinary</div><h2 class="section-title">Menu Kuliner</h2></div>
+      <p class="section-note">Pilihan menu AR KITCHEN disajikan dengan karakter rasa yang khas dan cocok untuk dinikmati kapan saja.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="item"><span class="number">01</span><div><h3>Tahu Kocek</h3><p>Menu pilihan AR KITCHEN</p></div></div>
+      <div class="item"><span class="number">02</span><div><h3>Mie Kocek</h3><p>Menu pilihan AR KITCHEN</p></div></div>
+      <div class="item"><span class="number">03</span><div><h3>Tahu Walik Kocek</h3><p>Menu pilihan AR KITCHEN</p></div></div>
+      <div class="item"><span class="number">04</span><div><h3>Tahu Pentol Balut Telor</h3><p>Menu pilihan AR KITCHEN</p></div></div>
+      <div class="item"><span class="number">05</span><div><h3>Pangsit Pentol</h3><p>Basah / Goreng</p></div></div>
+      <div class="item"><span class="number">06</span><div><h3>Tahu Walik</h3><p>Menu pilihan AR KITCHEN</p></div></div>
+      <div class="item"><span class="number">07</span><div><h3>Telor Cukit</h3><p>Menu pilihan AR KITCHEN</p></div></div>
+      <div class="item"><span class="number">08</span><div><h3>Nasi Telor Kribo</h3><p>Menu pilihan AR KITCHEN</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="product-section" id="produk">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">02 · Selected Products</div><h2 class="section-title">Produk</h2></div>
+      <p class="section-note">Produk olahan pilihan untuk melengkapi hidangan di rumah.</p>
+    </div>
+    <div class="product-grid">
+      <div class="item"><span class="product-tag">Signature</span><div><h3>Terasi Sangrai Enak Abang Rafi</h3><p>Produk olahan AR KITCHEN</p></div></div>
+      <div class="item"><span class="product-tag">Selected</span><div><h3>Sambal Terasi</h3><p>Produk olahan AR KITCHEN</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="section-head">
+      <div><div class="kicker">03 · Our Standard</div><h2 class="section-title">Standar Kami</h2></div>
+    </div>
+    <div class="values-grid">
+      <div class="value"><b>Rasa</b><p>Cita rasa khas yang menjadi bagian dari identitas AR KITCHEN.</p></div>
+      <div class="value"><b>Kualitas</b><p>Memilih produk dan olahan dengan perhatian pada mutu.</p></div>
+      <div class="value"><b>Kebersihan</b><p>Kebersihan menjadi bagian penting dalam setiap hidangan.</p></div>
+      <div class="value"><b>Keluarga</b><p>Menu yang cocok untuk menemani momen makan sehari-hari.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontak">
+  <div class="container contact-inner">
+    <div>
+      <div class="kicker" style="color:#17130c">04 · Contact</div>
+      <h2>Hubungi<br>AR KITCHEN.</h2>
+      <p>Untuk informasi menu, produk, dan kebutuhan lainnya, silakan hubungi kami melalui nomor berikut.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="https://wa.me/62882010180627" target="_blank" rel="noopener">Chat WhatsApp</a>
+        <a class="btn" href="tel:+62882010180627">Telepon</a>
+      </div>
+    </div>
+    <a class="phone" href="tel:+62882010180627">0882 0101 80627</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span class="footer-brand">AR KITCHEN SOBO</span>
+    <span>EST. 2017 · PILIHAN RASA, PILIHAN KELUARGA.</span>
+  </div>
+</footer>
+</body>
+</html>
